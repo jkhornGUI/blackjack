@@ -9,21 +9,19 @@ var initialBoardView = 	"<div class='form-group col-md-2'>" +
 							"<button class='btn' onclick='startGame(); return false;'>Start Game</button>"
 						"</div>";
 
-var onePlayerBoard =  	"<div ></div>" +
-						"<div></div>";
-var twoPlayerBoard = "";
-var threePlayerBoard = "";
-var fourPlayerBoard = "";
-
-var createBoard = function( numOfPlayers ) {
-	switch( numOfPlayers ) {
-		case 0:
-			return initialBoardView;
-		case 1:
-		case 2:
-		case 3:
-		case 4:
+var createPlayerDIV = function( board, numOfPlayers ) {
+	while( var i <= numOfPlayers ) {
+		board += 	"<div class='col-md-6' id='player" + i + "'>" +
+						"Player " + i +
+					"</div>";
 	}
+	return board;
+};
+						
+var createBoard = function( numOfPlayers ) {
+	var board = "<div class='col-md-6' id='dealer'>Dealer</div>";	
+	board = createPlayerDIV( board, numOfPlayers );
+	return board;
 };
 
 var view = {
