@@ -9,6 +9,11 @@ var initialBoardView = 	"<div class='form-group col-xs-2'>" +
 							"<button class='btn' onclick='startGame(); return false;'>Start Game</button>"
 						"</div>";
 
+var onePlayerBoard = "";
+var twoPlayerBoard = "";
+var threePlayerBoard = "";
+var fourPlayerBoard = "";
+						
 var view = {
 	showBoard: function( board ) {
 		$( "#gameBoard" ).html( board );
