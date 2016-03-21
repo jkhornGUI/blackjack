@@ -13,7 +13,7 @@ var createPlayerDIV = function( board, numOfPlayers ) {
 	var i;
 	while( i <= numOfPlayers ) {
 		board += 	"<div class='col-md-6' id='player" + i + "'>" +
-						"Player " + i +
+						"<h3>Player " + i + "</h3>" +
 					"</div>";
 	}
 	return board;
@@ -24,7 +24,7 @@ var createBoard = function( numOfPlayers ) {
 		return initialBoardView;
 	}
 	else {
-		var board = "<div class='col-md-6' id='dealer'>Dealer</div>";	
+		var board = "<div class='col-md-6' id='dealer'><h3>Dealer</h3></div>";	
 		board = createPlayerDIV( board, numOfPlayers );	
 		return board;
 	}
