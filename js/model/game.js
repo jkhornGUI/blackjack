@@ -1,7 +1,10 @@
 var game = {
 	numOfPlayers: 0,
 	initializeGame: function() {
-		view.showBoard( initialBoardView );
+		view.showBoard();
+	},
+	setNumOfPlayers: function( newNum ) {
+		game.numOfPlayers = newNum;
 	}
 	
 };

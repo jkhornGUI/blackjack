@@ -15,7 +15,8 @@ var threePlayerBoard = "";
 var fourPlayerBoard = "";
 						
 var view = {
-	showBoard: function( board ) {
-		$( "#gameBoard" ).html( board );
+	board: "",
+	showBoard: function() {
+		$( "#gameBoard" ).html( view.board );
 	}
 };
