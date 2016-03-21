@@ -32,6 +32,6 @@ var view = {
 		$( "#gameBoard" ).html( view.board );
 	},
 	setBoard: function( newBoard ) {
-		view.board( newBoard );
+		view.board = newBoard;
 	}
 };
