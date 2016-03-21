@@ -1,11 +1,12 @@
-var initialBoardView = "<p><strong>How many players?</strong></p><br>" +
-			"<form id='howManyPlayers' class='form-inline' role='form' method='post'>" +
-				"<input type='radio' name='numOfPlayers' value='1' checked> 1&nbsp;&nbsp;&nbsp;" +
-				"<input type='radio' name='numOfPlayers' value='2'> 2&nbsp;&nbsp;&nbsp;" +
-				"<input type='radio' name='numOfPlayers' value='3'> 3&nbsp;&nbsp;&nbsp;" +
-				"<input type='radio' name='numOfPlayers' value='4'> 4&nbsp;&nbsp;&nbsp;" +
-				"<button type='submit' class='btn btn-default'>Start</button>" +
-			"</form>";
+var initialBoardView = 	"<div class='form-group'>" +
+							"<label for='howManyPlayers'>Select list:</label>" +
+							"<select class='form-control' id='howManyPlayers'>" +
+								"<option>1</option>" +
+								"<option>2</option>" +
+								"<option>3</option>" +
+								"<option>4</option>" +
+							"</select>" +
+						"</div>";
 
 var view = {
 	showBoard: function( board ) {
