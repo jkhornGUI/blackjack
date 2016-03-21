@@ -5,7 +5,7 @@ var initialBoardView = 	"<div class='form-group col-xs-2'>" +
 								"<option>2</option>" +
 								"<option>3</option>" +
 								"<option>4</option>" +
-							"</select>&nbsp;&nbsp;" +
+							"</select><br>" +
 							"<button class='btn' onclick='startGame(); return false;'>Start Game</button>"
 						"</div>";
 
