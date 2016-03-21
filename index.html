@@ -19,7 +19,18 @@
 	
 	<body>
 
-		<div class="container"><h2>Black Jack Game</h2></div>
+		<div class="container">
+			<h2>Black Jack Game</h2>
+		</div>
+		<div class="container" id="gameBoard">
+			<form id="howManyPlayers" class="form-inline" role="form" method="post">
+				<input type="radio" name="numOfPlayers" value="1" checked> 1
+				<input type="radio" name="numOfPlayers" value="2"> 2
+				<input type="radio" name="numOfPlayers" value="3"> 3
+				<input type="radio" name="numOfPlayers" value="4"> 4
+				<button type='submit' class='btn btn-default'>Submit</button>
+			</form>
+		</div>
 	
 	</body>
 </html>
