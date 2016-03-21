@@ -20,9 +20,14 @@ var createPlayerDIV = function( board, numOfPlayers ) {
 };
 						
 var createBoard = function( numOfPlayers ) {
-	var board = "<div class='col-md-6' id='dealer'>Dealer</div>";	
-	board = createPlayerDIV( board, numOfPlayers );
-	return board;
+	if( numOfPlayers ) {
+		return initialBoardView;
+	}
+	else {
+		var board = "<div class='col-md-6' id='dealer'>Dealer</div>";	
+		board = createPlayerDIV( board, numOfPlayers );	
+		return board;
+	}
 };
 
 var view = {
