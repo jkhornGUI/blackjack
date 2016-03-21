@@ -18,5 +18,8 @@ var view = {
 	board: "",
 	showBoard: function() {
 		$( "#gameBoard" ).html( view.board );
+	},
+	setBoard: function( newBoard ) {
+		view.board( newBoard );
 	}
 };
