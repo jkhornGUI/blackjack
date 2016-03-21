@@ -1,4 +1,4 @@
-var initialBoardView = 	"<div class='form-group col-xs-2'>" +
+var initialBoardView = 	"<div class='form-group col-md-2'>" +
 							"<label for='howManyPlayers'>How many players?</label>" +
 							"<select class='form-control' id='howManyPlayers'>" +
 								"<option>1</option>" +
@@ -9,11 +9,23 @@ var initialBoardView = 	"<div class='form-group col-xs-2'>" +
 							"<button class='btn' onclick='startGame(); return false;'>Start Game</button>"
 						"</div>";
 
-var onePlayerBoard = "";
+var onePlayerBoard =  	"<div ></div>" +
+						"<div></div>";
 var twoPlayerBoard = "";
 var threePlayerBoard = "";
 var fourPlayerBoard = "";
-						
+
+var createBoard = function( numOfPlayers ) {
+	switch( numOfPlayers ) {
+		case 0:
+			return initialBoardView;
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+	}
+};
+
 var view = {
 	board: "",
 	showBoard: function() {
