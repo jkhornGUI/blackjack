@@ -1,4 +1,4 @@
-var initialBoardView = 	"<p><strong>How many players?</strong></p><br>"
+var initialBoardView = 	"<p><strong>How many players?</strong></p><br>" +
 						"<div class='form-group col-xs-2'>" +
 							"<select class='form-control' id='howManyPlayers'>" +
 								"<option>1</option>" +
