@@ -20,7 +20,7 @@ var createPlayerDIV = function( board, numOfPlayers ) {
 };
 						
 var createBoard = function( numOfPlayers ) {
-	if( numOfPlayers ) {
+	if( !numOfPlayers ) {
 		return initialBoardView;
 	}
 	else {
