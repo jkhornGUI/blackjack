@@ -7,7 +7,7 @@ var initialBoardView = "<p><strong>How many players?</strong></p><br>" +
 				"<button type='submit' class='btn btn-default'>Start</button>" +
 			"</form>";
 
-var viewObject = {
+var view = {
 	showBoard: function( board ) {
 		$( "#gameBoard" ).html( board );
 	}
