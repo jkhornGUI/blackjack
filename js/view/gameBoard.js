@@ -1,5 +1,5 @@
 var initialBoardView = 	"<div class='form-group'>" +
-							"<label for='howManyPlayers'>Select list:</label>" +
+							"<label for='howManyPlayers'>Select list: How many players?</label>" +
 							"<select class='form-control' id='howManyPlayers'>" +
 								"<option>1</option>" +
 								"<option>2</option>" +
