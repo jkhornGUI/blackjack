@@ -10,7 +10,8 @@ var initialBoardView = 	"<div class='form-group col-md-2'>" +
 						"</div>";
 
 var createPlayerDIV = function( board, numOfPlayers ) {
-	while( var i <= numOfPlayers ) {
+	var i;
+	while( i <= numOfPlayers ) {
 		board += 	"<div class='col-md-6' id='player" + i + "'>" +
 						"Player " + i +
 					"</div>";
