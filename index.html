@@ -12,24 +12,40 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<!-- css for bootstrap -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<!--<link rel="stylesheet" href="http://weblab.cs.uml.edu/~jkhorn/SE_Spring2016/blackjack/css/blackjack.css">-->
 
-		<link rel="stylesheet" type="text/css" href="css/blackjack.css"/>
 		<script src="js/view/gameBoard.js"></script>
-		<script src="js/model/game.js"></script>
-		<script src="js/controller/startGame.js"></script>
+		<script src="js/model/gameModel.js"></script>
+		<script src="js/model/deck.js"></script>
+		<script src="js/model/player.js"></script>
+		<script src="js/controller/gameController.js"></script>
+		<script src="js/controller/playerController.js"></script>
 		
 		<script>
 			$().ready(function(){
 					game.initializeGame();
 			});
 		</script>
-
+		
 	</head>
-	
+
 	<body>
 		<div class="container">
-			<h2>Black Jack Game</h2><br><br>
-			<div class="row" id="gameBoard"></div>
+				<h2>Black Jack Game&nbsp;&nbsp;
+					<button class="btn btn-default hidden" id="reset" onclick="gameController.resetGame();">Reset</button>
+				</h2><br><br>
+			<div class="row" id="gameBoard"></div><br><br><br><br>
+			<div id="playerInterface">
+				<h3 id="turn"></h3><br>
+				<h4 id="score"></h4><br><br>
+				<button class="btn btn-default hidden" id="hitBtn" onclick="playerController.hitMe();">Hit</button>&nbsp;&nbsp;
+				<button class="btn btn-default hidden" id="stayBtn" onclick="playerController.stay();">Stay</button>&nbsp;&nbsp;
+				<button class="btn btn-default hidden" id="splitBtn" onclick="playerController.split();">Split</button>
+			<div>
+			<br>
+			<h4 style="color:red;" id="error"></h4>
+			<h3 id="winner"></h3>
 		</div>
 
 	</body>
