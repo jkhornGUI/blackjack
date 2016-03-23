@@ -9,7 +9,12 @@ var initialBoardView = 	"<div class='form-group col-md-4'>" +
 							"</select><br>" +
 							"<button class='btn btn-default' onclick='gameController.startGame();'>Start Game</button>"
 						"</div>";
+<<<<<<< HEAD
 // view object
+=======
+						
+
+>>>>>>> origin/gh-pages
 var view = {
 	// board html
 	board: "",
@@ -17,6 +22,7 @@ var view = {
 	showBoard: function() {
 		$( "#gameBoard" ).html( this.board );
 	},
+<<<<<<< HEAD
 	/**
 	* function createBoard():
 	* params: int numOfPlayer: the number of players
@@ -27,10 +33,14 @@ var view = {
 	createBoard: function( numOfPlayers ) {
 		// if number of players equal to 0, it resets the board
 		// to initial view
+=======
+	createBoard: function( numOfPlayers ) {
+>>>>>>> origin/gh-pages
 		if( numOfPlayers === 0 ) {
 			this.board = initialBoardView;
 		}
 		else {
+<<<<<<< HEAD
 			// get array of players
 			var list = game.listOfPlayers;
 			// using jQuery, the columns size together should equal 12
@@ -41,6 +51,12 @@ var view = {
 			// class name for column size
 			var colClass = "col-md-" + colNum;
 			// start making the board html, creating dealers div
+=======
+			var list = game.listOfPlayers;
+			var GRID_LENGTH = 12;
+			var colNum = GRID_LENGTH / (numOfPlayers + 1);
+			var colClass = "col-md-" + colNum;
+>>>>>>> origin/gh-pages
 			var board = "<div class='" + colClass + "' id='dealer'>" +
 							"<h3>Dealer</h3><br>" +
 							"<div id='img0'>" +
@@ -48,7 +64,10 @@ var view = {
 							"</div>" +
 							"<br><h3 id='msg0'></h3>" +
 						"</div>";
+<<<<<<< HEAD
 			// create divs for rest of the players
+=======
+>>>>>>> origin/gh-pages
 			for( var i = 1; i <= numOfPlayers; i++ ) {
 				board += 	"<div class='" + colClass + "' id='player" + i + "'>" +
 								"<h3>" + list[i].playerNo +"</h3><br>" +
@@ -59,6 +78,7 @@ var view = {
 							"</div>";
 			}
 			//this.board = board;
+<<<<<<< HEAD
 			// display board
 			$( "#gameBoard" ).html( board );
 		}
@@ -84,12 +104,23 @@ var view = {
 	* This function make buttons reset, hitBtn, stayBtn, splitBtn visible by
 	* removing their hidden class.
 	*/
+=======
+			$( "#gameBoard" ).html( board );
+		}
+	},
+	updateBoard: function( playerNo ) {
+		var imgHTML = game.listOfPlayers[playerNo].getCards()
+		var elementID = "#img" + playerNo;
+		$( elementID ).html( imgHTML );
+	},
+>>>>>>> origin/gh-pages
 	showBtns: function() {
 		$( "#reset" ).removeClass( "hidden" );
 		$( "#hitBtn" ).removeClass( "hidden" );
 		$( "#stayBtn" ).removeClass( "hidden" );
 		$( "#splitBtn" ).removeClass( "hidden" );
 	},
+<<<<<<< HEAD
 	/**
 	* function hideBtn():
 	* params: string id of button elements
@@ -97,6 +128,8 @@ var view = {
 	* This function hides elements that are arguments of the function
 	* by adding hidden class.
 	*/
+=======
+>>>>>>> origin/gh-pages
 	hideBtn: function() {
 		var btnID;
 		for( var i = 0; i < arguments.length; i++ ) {
@@ -104,6 +137,7 @@ var view = {
 			$( btnID ).addClass( "hidden" );
 		}
 	},
+<<<<<<< HEAD
 	/**
 	* function updatePlayerInterface():
 	* params: none
@@ -133,12 +167,26 @@ var view = {
 	* return: none
 	* This function empties elements with ids turn, score, error, winner.
 	*/
+=======
+	updatePlayerInterface: function() {
+		var turn = playerController.playerTurn;
+		var players = game.listOfPlayers;
+		if( turn === 0 ) {
+			$( "#turn" ).html( "Turn: Dealer");
+		}
+		else {
+			$( "#turn" ).html( "Turn: Player " + turn);
+		}
+		$( "#score" ).html( "Score: " +  players[turn].handVal);
+	},
+>>>>>>> origin/gh-pages
 	clearInterface: function() {
 		$( "#turn" ).empty();
 		$( "#score" ).empty();
 		$( "#error" ).empty();
 		$( "#winner" ).empty();
 	},
+<<<<<<< HEAD
 	/**
 	* function clearInterface():
 	* params: string msg is the message to display 
@@ -147,6 +195,8 @@ var view = {
 	* return: none
 	* This function inserts a message to an element.
 	*/
+=======
+>>>>>>> origin/gh-pages
 	insertMsg: function( msg, elementID, playerNo ) {
 		var elemID = "#" + elementID + playerNo;
 		$( elemID ).text( msg );

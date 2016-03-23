@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // gameController object
 var gameController = {
 	/**
@@ -40,10 +41,29 @@ var gameController = {
 		// change view back to initial view
 		view.createBoard( 0 );
 		// hides buttons in the arguments
+=======
+var gameController = { 
+	startGame: function() {
+		var newNum = $( "#howManyPlayers" ).val();
+		game.setNumOfPlayers( newNum );
+		game.initializePlayers();
+		deck.shuffle();
+		deck.dealCards();
+		view.createBoard( game.numOfPlayers );
+		playerController.evalAllHands();
+		//view.showBoard();
+		view.showBtns()
+		view.updatePlayerInterface();
+	},
+	resetGame: function() {
+		game.listOfPlayers = [];
+		view.createBoard( 0 );
+>>>>>>> origin/gh-pages
 		view.hideBtn( "reset", "hitBtn", "stayBtn", "splitBtn" );
 		view.clearInterface();
 		view.showBoard();
 		deck.resetDeck();
+<<<<<<< HEAD
 		// changes turn back to player 1
 		playerController.resetTurn();
 	},
@@ -60,12 +80,21 @@ var gameController = {
 		// traversing through list of players
 		for( var i = 1; i < numOfPlayers; i++ ) {
 			// checking if hand value less than or equal to 21
+=======
+		playerController.resetTurn();
+	},
+	allLose: function() {
+		var players = game.listOfPlayers;
+		var numOfPlayers = players.length;
+		for( var i = 1; i < numOfPlayers; i++ ) {
+>>>>>>> origin/gh-pages
 			if( players[i].handVal <= 21 ) {
 				return false;
 			}
 		}
 		return true;
 	},
+<<<<<<< HEAD
 	/**
 	* function checkForWinners():
 	* params: none
@@ -99,10 +128,26 @@ var gameController = {
 				if( players[i].handVal <= 21 ) {
 					// concatenate player number with winner msg
 					msg += " " + players[i].playerNo;
+=======
+	checkForWinners: function() {
+		var players = game.listOfPlayers;
+		var numOfPlayers = players.length;
+		var dealerScore = players[0].handVal;
+		var currentPlayerScore;
+		var numWinners = 0;
+		var msg = "Winner:"
+		var i;
+
+		if( players[0].state === states.BUST ) {
+			for( i = 1; i < numOfPlayers; i++ ) {
+				if( players[i].handVal <= 21 ) {
+					msg += players[i].playerNo;
+>>>>>>> origin/gh-pages
 				}
 			}
 		}
 		else {
+<<<<<<< HEAD
 			// else find players with hand less than or equal to 21
 			// and is greater than the dealer's hand
 			for( i = 1; i < numOfPlayers; i++ ) {
@@ -121,6 +166,20 @@ var gameController = {
 			}
 		}
 		// tell view to display message
+=======
+			for( i = 1; i < numOfPlayers; i++ ) {
+				currentPlayerScore = players[i].handVal
+				if( currentPlayerScore <= 21 &&  currentPlayerScore >= dealerScore ) {
+					msg += players[i].playerNo;
+					numWinners++;
+				}
+			}
+			if( numWinners === 0 ) {
+				msg += " Dealer";
+			}
+		}
+		
+>>>>>>> origin/gh-pages
 		view.insertMsg( msg, "winner", "" );
 	}
 }

@@ -19,7 +19,11 @@ var player = function( title ) {
 		if( this.playerNo === "dealer" && this.state === states.START ) {
 			imgHTML = this.hand[0].img + "&nbsp;" + deck.faceDownCard;
 			this.state = states.DEALER;
+<<<<<<< HEAD
 			//console.log( playerController.playerTurn, imgHTML );
+=======
+			console.log( playerController.playerTurn, imgHTML );
+>>>>>>> origin/gh-pages
 		}
 		else {
 			for( var i = 0; i < this.hand.length; i++ ) {
