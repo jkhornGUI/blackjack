@@ -1,6 +1,6 @@
 // html of the select form before start of game to get the number of players
 // from the user
-var initialBoardView = 	"<div class='form-group col-md-4'>" +
+var initialBoardView = 	"<div class='form-group col-sm-4'>" +
 							"<label for='howManyPlayers'>How many players?</label>" +
 							"<select class='form-control' id='howManyPlayers'>" +
 								"<option>1</option>" +
@@ -39,7 +39,7 @@ var view = {
 			// by dividing grid length by number of players (+1 for dealer)
 			var colNum = GRID_LENGTH / (numOfPlayers + 1);
 			// class name for column size
-			var colClass = "col-md-" + colNum;
+			var colClass = "col-sm-" + colNum;
 			// start making the board html, creating dealers div
 			var board = "<div class='" + colClass + "' id='dealer'>" +
 							"<h3>Dealer</h3><br>" +
