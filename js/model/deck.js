@@ -5,7 +5,7 @@ var deckTemplate = [
 		{name:  "A", suit: "heart",   value: 11, img: "../blackjack/cards/ace_of_hearts.png'/>"},
 		{name:  "K", suit: "spade",   value: 10, img: "../blackjack/cards/king_of_spades2.png'/>"},
 		{name:  "K", suit: "club",    value: 10, img: "../blackjack/cards/king_of_clubs2.png'/>"},
-		{name:  "K", suit: "diamond", value: 10, img: "./blackjack/cards/king_of_diamonds2.png'/>"},
+		{name:  "K", suit: "diamond", value: 10, img: "../blackjack/cards/king_of_diamonds2.png'/>"},
 		{name:  "K", suit: "heart",   value: 10, img: "../blackjack/cards/king_of_hearts2.png'/>"},
 		{name:  "Q", suit: "spade",   value: 10, img: "../blackjack/cards/queen_of_spades2.png'/>"},
 		{name:  "Q", suit: "club",    value: 10, img: "../blackjack/cards/queen_of_clubs2.png'/>"},
@@ -28,7 +28,7 @@ var deckTemplate = [
 		{name:  "8", suit: "diamond", value: 8,  img: "../blackjack/cards/8_of_diamonds.png'/>"},
 		{name:  "8", suit: "heart",   value: 8,  img: "../blackjack/cards/8_of_hearts.png'/>"},
 		{name:  "7", suit: "spade",   value: 7,  img: "../blackjack/cards/7_of_spades.png'/>"},
-		{name:  "7", suit: "club",    value: 7,  img: "./blackjack/cards/7_of_clubs.png'/>"},
+		{name:  "7", suit: "club",    value: 7,  img: "../blackjack/cards/7_of_clubs.png'/>"},
 		{name:  "7", suit: "diamond", value: 7,  img: "../blackjack/cards/7_of_diamonds.png'/>"},
 		{name:  "7", suit: "heart",   value: 7,  img: "../blackjack/cards/7_of_hearts.png'/>"},
 		{name:  "6", suit: "spade",   value: 6,  img: "../blackjack/cards/6_of_spades.png'/>"},
@@ -53,7 +53,7 @@ var deckTemplate = [
 		{name:  "2", suit: "heart",   value: 2,  img: "../blackjack/cards/2_of_hearts.png'/>"}];
 
 var deck = {
-	faceDownCard: "../blackjack/cards/facedown.png'/>",
+	faceDownCard: "<img src='../blackjack/cards/facedown.png'/>",
 	cards: deckTemplate.slice( 0 ),
 	shuffle: function() {
 		var v = deck.cards;
