@@ -244,13 +244,13 @@ var dealerController = {
 		this.revealCard();
 		// hide buttons
 		view.hideBtn();
-		var msg = "Winner: Dealer";
+		var msg = "Winner:";
 
 		// find players with 21 and add them into array have21
 		for( var i = 0; i < numOfPlayers; i++ ) {
 			if( players[i].handVal === 21 ) {
 				// add player to winner  message
-				msg += players[i].playerNo;
+				msg += " " + players[i].playerNo;
 			}
 		}
 		// display message
