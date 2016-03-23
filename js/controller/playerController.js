@@ -34,8 +34,9 @@ var playerController = {
 		//view.showBoard();
 	},
 	split: function() {
-		var msg = "Split not implemented.";
-		$( "#error" ).html( msg );
+		//var msg = "Split not implemented.";
+		//$( "#error" ).html( msg );
+		$( "#error" ).fadeIn( 3000 );
 		$( "#error" ).fadeOut( 3000 );
 	},
 	evalCurrentHand: function() {
